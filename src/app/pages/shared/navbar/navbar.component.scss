@@ -1,0 +1,29 @@
+.navbar{
+    z-index: 1000;
+    background-color: #fff;
+    padding: 5px 0;
+    position: fixed;
+    border: 1px solid lightgrey;
+    box-shadow: 0px -2px 10px 1px lightgrey;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 430px;
+    // width: 380px;
+    height: fit-content;
+    bottom: 0%;
+    .navbar-nav{
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-evenly;
+        a {
+            width: fit-content;
+            min-height: 40px;
+            height: 5vh;
+            img {
+                height: 100%;
+                
+
+            }   
+        }
+    }
+}

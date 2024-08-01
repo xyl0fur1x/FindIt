@@ -1,0 +1,43 @@
+.container {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    .search-box {
+        box-sizing: border-box;
+        width: 100%;
+        
+        min-height: 30px;
+        height: 5vh;
+        padding: 5px 0;
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            .search-field {
+                box-sizing: border-box;
+                border: 1px solid black;
+                width: 85%;
+                border-radius: 5px;
+                padding-left: 15px;
+                min-height: 20px;
+                height: 4vh;
+    
+            }
+        }
+        
+    }
+    .hint {
+        font-size: 3vh;;
+        box-sizing: border-box;
+        font-weight: bold;
+        text-align: center;
+    }
+    .users {
+        width: 100%;
+        height: fit-content;
+        padding-bottom: 60px;
+
+        
+    }
+}

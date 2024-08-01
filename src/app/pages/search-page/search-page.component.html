@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="search-box">
+        <form  #search="ngForm" (ngSubmit)="onSearch(search)">
+            <input type="text" placeholder="search" class="search-field" name="searchRequest" ngModel (input)="onSearch(search)">
+        </form>
+    </div>
+    <p class="hint">{{resultText}}</p>
+    <div class="users">
+        @for(user of users; track user) {
+            <app-profile-preview
+            [userId]="user.userId"
+            [userName]="user.userName"
+            [userPhotoUrl]="user.userPhotoUrl"
+            [userDescription]="user.userDescription"
+            >
+            </app-profile-preview>
+
+        }
+    </div>
+
+
+</div>

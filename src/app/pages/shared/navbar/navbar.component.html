@@ -1,0 +1,16 @@
+<div class="navbar" *ngIf="NavbarService.getStatus()">
+    <nav class="navbar-nav">
+        <a routerLink="feed" class="home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" *ngIf="NavbarService.getStatus()">
+            <img src="https://pngfre.com/wp-content/uploads/House-3.png" alt="">
+        </a>
+        <a routerLink="search" class="search" routerLinkActive="active" *ngIf="NavbarService.getStatus()">
+            <img src="https://cdn-icons-png.flaticon.com/512/166/166077.png" alt="">
+        </a>
+        <a class="upload" routerLinkActive="active" (click)="onNavigateNewPost()" *ngIf="NavbarService.getStatus()">
+            <img src="https://www.freeiconspng.com/thumbs/add-icon-png/add-icon--line-iconset--iconsmind-29.png" alt="">
+        </a>
+        <a class="profile" routerLinkActive="active" (click)="onNavigateTo()">
+            <img src="https://iconape.com/wp-content/png_logo_vector/user-circle.png" alt="">
+        </a>
+    </nav>
+</div>

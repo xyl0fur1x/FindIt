@@ -1,0 +1,84 @@
+.container {
+    max-width: 430px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: black;
+
+    .new_post {
+        width: fit-content;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .location_iframe {
+        width: 100%;
+        height: 300px;
+        filter: invert(90%) hue-rotate(180deg);
+        margin-bottom: 10px;
+    }
+    .upload_box {
+        padding: 0 10px;
+        form {
+            .input_field, .photo{
+                background-color: lightgray;
+                transition: background-color .2s ease-in-out;
+                &:focus, &:hover {
+                    background-color: white;
+                }
+                box-sizing: border-box;
+                border: 1px solid lightgrey;
+                border-radius: 10px;
+                outline: none;
+                display: block;
+                height: 40px;
+                padding: 0 10px;
+                width: 100%;
+                margin-bottom: 10px;
+                
+            }
+            .input_description {
+                textarea {
+                    resize: none;
+                    padding: 10px 10px;
+                    height: 100px;
+                }
+            }
+            input[type='file'] {
+                display: none;
+            }
+            .photo {
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .added_photo {
+                margin-bottom: 10px;
+
+            }
+        }
+        
+        .btn-submit {
+            box-sizing: border-box;
+            width: 100%;
+            height: 30px;
+            margin-bottom: 60px;
+            transition: all .2s ease-in-out;
+            &:focus, &:hover {
+                background-color: rgb(25, 117, 208);
+            }
+        }
+        p {
+
+        }
+
+        .added_photo {
+            
+            max-width: 430px;
+            height: auto;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

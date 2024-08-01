@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="logo">
+        <h1 class="header-text">FindIt</h1>
+    </div>
+    <div class="login-box">
+        @if(loginForm) {
+            <app-login></app-login>
+        } @else {
+            <app-register></app-register>
+        }
+    </div>
+    <div class="alt">
+        <div class="alt_line"></div>
+        <div class="alt_or-box"><p class="or-text">OR</p></div>
+        <div class="alt_line"></div>
+    </div>
+    <div class="register-link">
+        <a (click)="loginForm = !loginForm">{{loginForm ? "Register" : "Login"}}</a>
+    </div>
+</div>

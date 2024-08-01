@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="profile">
+        <div class="profile_info">
+            <header class="profile-info_username">
+                <h1 class="header-text">{{userName}}</h1>
+            </header>
+
+            <div class="profile-info_userData">
+                <div class="wrapper">   
+                    <div class="profile-info_userAvatar">
+                        <img [src]="userPhotoUrl" alt="">
+                    </div>
+    
+    
+                    <div class="profile-info_userSubs">
+                        <div class="content">
+                            <div class="content_box">
+                                <p class="header-text">Posts</p>
+                                <p class="header-text">{{userPostsAmount}}</p>
+                            </div>
+                            <div class="content_box">
+                                <p class="header-text">Follows</p>
+                                <p class="header-text">{{userSubscribersAmount}}</p>
+                            </div>
+                            <div class="content_box">
+                                <p class="header-text">Following</p>
+                                <p class="header-text">{{userSubscriptionsAmount}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="profile-info_userDescription">
+                    <p class="userName_description">{{userName}}</p>
+                    <p class="userDesc_description">{{userDescription}}</p>
+                    <button 
+                        class="btn-sub" 
+                        *ngIf="isSubable" 
+                        [disabled]="isSubscribed" 
+                        [ngClass]="{'btn-isSubbed': isSubscribed}"
+                        (click)="subscribeTo()"
+                    >{{btnText}}</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="posts">
+            <p class="no-posts" *ngIf="error" style="color: white; text-align: center; font-weight: bold;">{{error}}</p>
+            @for(post of userPosts; track post) {
+                <app-post-preview
+                    [userName]="post.userName"
+                    [header]="post.header"
+                    [description]="post.description"
+                    [lat]="post.lat"
+                    [lng]="post.lng"                
+                ></app-post-preview>
+            }
+        </div>
+    </div>
+</div>

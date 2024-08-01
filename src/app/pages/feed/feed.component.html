@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="logo">
+        <h1 class="header-text">FindIt</h1>
+    </div>
+
+
+    <div class="posts">
+        <p class="err_msg" *ngIf="errMsg">
+            {{errMsg}}
+            </p>
+        @for(post of posts; track post) {
+            <app-post-main 
+                [postId]="post.postId"
+                [userName]="post.userName"
+                [header]="post.header"
+                [description]="post.description"
+                [lat] = "post.lat"
+                [lng] = "post.lng"
+            ></app-post-main>
+        }
+    </div>
+
+
+    
+</div>

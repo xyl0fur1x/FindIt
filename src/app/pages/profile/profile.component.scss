@@ -1,0 +1,109 @@
+* {
+    color: white
+}
+.container {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    .profile_info {
+        padding: 0px 10px;
+        box-sizing: border-box;
+    }
+
+    .profile-info_username {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+
+    .wrapper {
+        display: flex;
+        flex-wrap: no-wrap;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+
+
+        .profile-info_userAvatar{
+            width: 100px;
+            img {
+                width: 100px;
+                border-radius: 100px;
+                height: auto;
+                aspect-ratio: 1/1;
+            }
+        }
+        .profile-info_userSubs{
+            width: 100%;    
+            max-width: 330px;
+            .content {
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                .content_box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    box-sizing: border-box;
+                    // border: 1px solid white;
+                    .header-text {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
+    }
+    .profile-info_userDescription {
+        height: fit-content;
+        box-sizing: border-box;
+        padding-top: 15px;
+
+        .userName_description {
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .userDesc_description{
+            padding-top: 5px;
+            font-size: 15px;
+        }
+    }
+    .profile_user-settings {
+        padding-top: 15px;
+        .btn-settings {
+            font-size: 15px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            padding: 5px 5px;
+            height: 25px;
+            font-weight: bold;
+            background-color: rgb(68, 68, 68);
+
+        }
+    }
+
+    .posts {
+        padding-top: 15px;
+        padding-bottom: 60px;
+        width: 100%;
+        height: fit-content;
+    }
+    .btn-sub {
+        margin-top: 10px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 30px;
+        transition: all .2s ease-in-out;
+        &:focus, &:hover {
+            background-color: rgb(25, 117, 208);
+        }
+    }
+    .btn-isSubbed {
+        background-color: rgb(15, 58, 100);
+        transition: none;
+        &:focus, &:hover {
+            background-color: rgb(15, 58, 100);
+        }
+    }
+}

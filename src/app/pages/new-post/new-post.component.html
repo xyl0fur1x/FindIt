@@ -1,0 +1,22 @@
+<div class="container">
+    <header class="new_post">
+        <h1 class="header-text">НОВА ПУБЛІКАЦІЯ</h1>
+    </header>
+
+    <div class="upload_box">
+        <div>
+            <form #send="ngForm" (ngSubmit)="onSubmit(send)">
+                <div class="input_header">
+                    <input type="text" class="input_field" placeholder="Введіть заголовок" maxlength="50" name="header" required ngModel>
+                </div>
+                <div class="input_description">
+                    <textarea type="text" class="input_field" placeholder="Введіть опис" maxlength="200" name="description" ngModel></textarea>
+                </div>
+                <iframe #iframe_box frameborder="0" class="location_iframe"></iframe>
+                <input type="submit" class="btn-submit" value="Опублікувати" >
+            </form>
+            
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,34 @@
+<form class="register-form" #register="ngForm" (ngSubmit)="onSubmit(register)">
+    <input type="text" 
+    placeholder="Username" 
+    ngModel
+    required
+    name="userName"
+    maxlength="20"
+    (input)="invalidData = false"
+    [ngClass]="{'err_border': invalidData}"
+
+    >
+    <input type="password" 
+    placeholder="Password"
+    ngModel
+    required
+    name="password"
+    minlength="8"
+    maxlength="40"
+    (input)="invalidData = false"
+    [ngClass]="{'err_border': invalidData}"
+    
+
+    >
+    <button type="submit" 
+    class="btn-submit"
+    [disabled]="!register.valid"
+    
+    
+    >{{btnText}}</button>
+
+    <p class="err_msg" *ngIf="invalidData">
+        {{errorMsg}}
+    </p>
+</form>

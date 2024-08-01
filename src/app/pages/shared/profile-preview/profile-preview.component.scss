@@ -1,0 +1,28 @@
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    
+    .wrapper {
+        margin: 10px 10px 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+        .logo {
+            box-sizing: border-box;
+            width: 75px;
+        }
+        img {
+            width: 75px;
+            border-radius: 100px;
+            height: auto;
+            aspect-ratio: 1/1;
+        }
+        .userInfo {
+            margin-left: 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
